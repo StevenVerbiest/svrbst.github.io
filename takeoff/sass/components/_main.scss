@@ -1,4 +1,5 @@
 .intro {
+  color: $gray-75;
   @include fsRem(18px);
   font-family: $font-family-serif;
   text-align: center;
@@ -6,6 +7,10 @@
 .block {
   border: 2px solid $gray-15;
   padding: $rh-sml;
+  a {
+    color: $gray-75;
+    text-decoration: none;
+  }
   &__img {
     position: relative;
     img {
@@ -30,10 +35,9 @@
       }
     }
   }
-  &__ct {
-    float: left;
-    padding-left: 20px;
-    padding-top: $rh-med;
+  &--title {
+    margin-top: $rh-sml;
+    @include fsRem(18px);
   }
   &__title {
 

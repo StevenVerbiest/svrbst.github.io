@@ -40,6 +40,7 @@
 .heading--3 {
   @extend .heading;
   @include fsRem($font-size-h3);
+  margin-bottom: floor($line-height-base * .25);
 }
 .heading--4 {
   @extend .heading;
