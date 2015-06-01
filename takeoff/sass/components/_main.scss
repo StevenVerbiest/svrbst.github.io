@@ -1,0 +1,41 @@
+.intro {
+  @include fsRem(18px);
+  font-family: $font-family-serif;
+  text-align: center;
+}
+.block {
+  border: 2px solid $gray-15;
+  padding: $rh-sml;
+  &__img {
+    position: relative;
+    img {
+      display: block;
+    }
+    &:before {
+      @include transitions(opacity);
+      content: '';
+      opacity: .25;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $black;
+    }
+    &:hover,
+    &:focus {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+  &__ct {
+    float: left;
+    padding-left: 20px;
+    padding-top: $rh-med;
+  }
+  &__title {
+
+  }
+}

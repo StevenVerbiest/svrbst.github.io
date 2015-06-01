@@ -1,0 +1,128 @@
+// Colors
+//
+$gray-100: #404040 !default;
+$gray-75: #494949 !default;
+$gray-50: #858585 !default;
+$gray-25: #b7b7b7 !default;
+$gray-15: #dbdbdb !default;
+$gray-10: #ededed !default;
+$gray-5: #f0f0f0 !default;
+$gray-0: #f9f9f9 !default;
+
+$black: #111 !default;
+$white: #fff !default;
+
+// Brand colors
+$color-brand-primary: #3c76ab !default;
+
+$notice-colors: (
+  success: #3c763d,
+  info: #2e82ad,
+  warning: #9b7035,
+  danger: #bd292c
+);
+
+// Background color
+$color-background: $gray-10 !default;
+// Text color
+$color-text: $gray-75 !default;
+
+// Link color
+$color-link: $color-brand-primary !default;
+$color-link-hover: darken($color-link, 15%) !default;
+$color-link-visited: darken($color-link, 5%) !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+$font-family-sans: 'Open Sans', sans-serif !default;
+$font-family-serif: 'Lora', serif !default;
+$font-family-icons: 'FontAwesome' !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base: $font-family-sans !default;
+
+$font-size-base: 16px !default;
+$font-size-root: 16px !default;
+$font-size-large: 20px !default;
+$font-size-small: 14px !default;
+
+$font-size-h1: 32px !default;
+$font-size-h2: 20px !default;
+$font-size-h3: 18px !default;
+$font-size-h4: $font-size-base !default;
+$font-size-h5: 14px !default;
+
+$font-weight-thin: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extra-bold: 800 !default;
+$font-weight-base: $font-weight-regular !default;
+
+$line-height-base: 20px !default; // 20/14
+
+// Fonts
+//
+$fonts-path: '../fonts' !default;
+$fonts-icon-class: icon;
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family: 'Montserrat', sans-serif !default;
+$headings-font-weight: $font-weight-bold !default;
+$headings-line-height: 1.1 !default;
+$headings-color: $gray-100 !default;
+$headings-color-alt: $color-brand-primary !default;
+
+// Layers
+// ------
+//
+// For the z-index
+$zindex-layer-1: 10;
+$zindex-layer-2: 20;
+$zindex-layer-3: 30;
+$zindex-layer-4: 40;
+$zindex-layer-5: 2050;
+
+// Breakpoints
+// -----------
+$breakpoints: (
+  xxs: 320px,
+  xsm: 420px,
+  sml: 660px,
+  med: 820px,
+  lrg: 1200px
+);
+
+// Grid
+// ----
+//
+// columns          - The total amount of columns
+// gutter           - The amount of space between two columns
+// container-*      - The total width of the container for large / medium / small
+$grid-gutter-width: 20px !default;
+$grid-columns: 12 !default;
+$grid-container-width: 1200px !default;
+
+
+// Rhythm
+$rh-xxs: $line-height-base * .25;
+$rh-xsm: $line-height-base * .5;
+$rh-sml: $line-height-base * .75;
+$rh-med: $line-height-base;
+$rh-lrg: $line-height-base * 1.25;
+$rh-xlr: $line-height-base * 1.5;
+$rh-xxl: $line-height-base * 2;
+
+// Transitions
+// -----------
+//
+$transition-duration-base: 200ms;
+$transition-easing-base: ease-in-out;
+
+// Border radius
+// -------------
+//
+$border-radius-base: 3px;
+$border-radius-small: 2px;
+$border-radius-large: 5px;
