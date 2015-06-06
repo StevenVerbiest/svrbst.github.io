@@ -6,16 +6,15 @@
   padding: ($rh-xxl * 1.5) 0;
   background: $gray-10;
   border: 20px solid $white;
-  // border-bottom: 2px solid $gray-10;
   &__logo {
+    animation: incomingHeader 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-delay: .5s;
     display: block;
     margin: 0;
     padding: 0;
     background: none;
-    // margin-bottom: $rh-xxs;
     font-size: 96px;
     font-size: 9.6vh;
-    // @include fsRem(26px);
   }
   &__tagline {
     margin: 0;
@@ -31,16 +30,23 @@
     color: $gray-75;
     font-size: 20px;
     font-size: 2vh;
-    // @include fsRem(20px);
     font-family: $font-family-serif;
     font-weight: $font-weight-regular;
     text-align: right;
     text-transform: none;
-    // text-transform: uppercase;
-    // &:before,
-    // &:after {
-    //   content: '\2014';
-    //   margin: 0 .2em;
-    // }
+  }
+}
+
+@keyframes incomingHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

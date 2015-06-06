@@ -1,24 +1,14 @@
-.intro {
-  // color: $gray-75;
-  // @include fsRem(24px);
-  // font-family: $font-family-serif;
-  // text-align: center;
-}
-
 .project {
-  position: relative;
-  overflow: hidden;
-  display: block;
   &__img {
-    // margin: .5em 0;
     img {
+      @include transitions(transform, 1.5s, linear);
       display: block;
     }
   }
   &__ct {
     @include transitions(background);
     position: absolute;
-    z-index: 20;
+    z-index: 10;
     top: 0;
     right: 0;
     bottom: 0;
@@ -29,20 +19,59 @@
     background: rgba($white, .9);
   }
   &__title {
-    @include transitions((background, color));
+    @include transitions((background, color, opacity, transform), .5s);
+    transform: translateY(-10px);
+    opacity: 0;
     padding: .8em 1.2em;
     border: 2px solid $black;
+    color: $black;
+    font-family: $font-family-sans;
+    @include fsRem(16px);
+    text-transform: uppercase;
+  }
+  &__meta {
+    margin-bottom: $rh-lrg;
+    font-family: $font-family-sans;
+    @include fsRem(14px);
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+  }
+  &__link {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    &:hover,
+    &:focus {
+      .project__ct {
+        background: rgba($white, .8);
+      }
+      .project__title {
+        transform: translateY(0);
+        opacity: 1;
+        // background: $black;
+        // color: $white;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__desc {
+    position: relative;
+    z-index: 20;
+    padding: 0 ($rh-xlr * 2);
+    margin: ($rh-lrg * 2) 0;
+    // text-align: center;
+    a {
+      color: $black;
+      font-size: 85%;
+      font-style: italic;
+    }
   }
 
-  &:hover,
-  &:focus {
-    .project__ct {
-      background: rgba($white, .8);
-    }
-    .project__title {
-      background: $black;
-      color: $white;
-    }
+
+  & + & {
+    margin-top: $rh-xlr * 3;
   }
 }
 
