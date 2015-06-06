@@ -7,7 +7,16 @@
   text-transform: uppercase;
 
   // margin-top: ceil($line-height-base * 1.5);
-  margin-bottom: floor($line-height-base * 1.5);
+  // margin-bottom: floor($line-height-base * 1.5)
+  margin-bottom: 1em;
+
+  &--border {
+    padding-bottom: 1em;
+    background: linear-gradient(to right, $black, $black);
+    background-size: 20% 2px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
   a {
     @include link-variant(inherit);
     text-decoration: none;

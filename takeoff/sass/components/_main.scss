@@ -1,45 +1,87 @@
 .intro {
-  color: $gray-75;
-  @include fsRem(18px);
-  font-family: $font-family-serif;
-  text-align: center;
+  // color: $gray-75;
+  // @include fsRem(24px);
+  // font-family: $font-family-serif;
+  // text-align: center;
 }
-.block {
-  border: 2px solid $gray-15;
-  padding: $rh-sml;
-  a {
-    color: $gray-75;
-    text-decoration: none;
-  }
+
+.project {
+  position: relative;
+  overflow: hidden;
+  display: block;
   &__img {
-    position: relative;
+    // margin: .5em 0;
     img {
       display: block;
     }
-    &:before {
-      @include transitions(opacity);
-      content: '';
-      opacity: .25;
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: $black;
-    }
-    &:hover,
-    &:focus {
-      &:before {
-        opacity: 0;
-      }
-    }
   }
-  &--title {
-    margin-top: $rh-sml;
-    @include fsRem(18px);
+  &__ct {
+    @include transitions(background);
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($white, .9);
   }
   &__title {
+    @include transitions((background, color));
+    padding: .8em 1.2em;
+    border: 2px solid $black;
+  }
 
+  &:hover,
+  &:focus {
+    .project__ct {
+      background: rgba($white, .8);
+    }
+    .project__title {
+      background: $black;
+      color: $white;
+    }
   }
 }
+
+// .block {
+//   border: 2px solid $gray-15;
+//   padding: $rh-sml;
+//   a {
+//     color: $gray-75;
+//     text-decoration: none;
+//   }
+//   &__img {
+//     position: relative;
+//     img {
+//       display: block;
+//     }
+//     &:before {
+//       @include transitions(opacity);
+//       content: '';
+//       opacity: .25;
+//       position: absolute;
+//       z-index: 10;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       left: 0;
+//       background: $black;
+//     }
+//     &:hover,
+//     &:focus {
+//       &:before {
+//         opacity: 0;
+//       }
+//     }
+//   }
+//   &--title {
+//     margin-top: $rh-sml;
+//     @include fsRem(18px);
+//   }
+//   &__title {
+
+//   }
+// }

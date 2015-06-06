@@ -1,17 +1,46 @@
 .page-header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
   padding: ($rh-xxl * 1.5) 0;
+  background: $gray-10;
+  border: 20px solid $white;
   // border-bottom: 2px solid $gray-10;
   &__logo {
     display: block;
-    margin-bottom: $rh-xxs;
-    @include fsRem(26px);
+    margin: 0;
+    padding: 0;
+    background: none;
+    // margin-bottom: $rh-xxs;
+    font-size: 96px;
+    font-size: 9.6vh;
+    // @include fsRem(26px);
   }
   &__tagline {
     margin: 0;
-    color: $gray-50;
-    @include fsRem(15px);
+
+    margin-top: 2vh;
+    padding-top: 2vh;
+
+    background: linear-gradient(to right, $black, $black);
+    background-size: 20% 1px;
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    color: $gray-75;
+    font-size: 20px;
+    font-size: 2vh;
+    // @include fsRem(20px);
+    font-family: $font-family-serif;
     font-weight: $font-weight-regular;
+    text-align: right;
     text-transform: none;
     // text-transform: uppercase;
+    // &:before,
+    // &:after {
+    //   content: '\2014';
+    //   margin: 0 .2em;
+    // }
   }
 }

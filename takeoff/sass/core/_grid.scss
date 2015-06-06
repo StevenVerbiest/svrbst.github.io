@@ -1,8 +1,8 @@
 .container {
   @include container-fluid;
   max-width: $grid-container-width;
-  &--narrow {
-    max-width: 800px;
+  &--sml {
+    max-width: 600px;
   }
 }
 .container--fluid {

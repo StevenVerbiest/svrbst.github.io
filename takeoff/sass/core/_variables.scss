@@ -12,6 +12,8 @@ $gray-0: #f9f9f9 !default;
 $black: #111 !default;
 $white: #fff !default;
 
+// 737373
+
 // Brand colors
 $color-brand-primary: #3c76ab !default;
 
@@ -23,9 +25,9 @@ $notice-colors: (
 );
 
 // Background color
-$color-background: $gray-10 !default;
+$color-background: $white !default;
 // Text color
-$color-text: $gray-50 !default;
+$color-text: $gray-75 !default;
 
 // Link color
 $color-link: $color-brand-primary !default;
@@ -39,15 +41,15 @@ $font-family-sans: 'Open Sans', sans-serif !default;
 $font-family-serif: 'Lora', serif !default;
 $font-family-icons: 'FontAwesome' !default;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base: $font-family-sans !default;
+$font-family-base: $font-family-serif !default;
 
-$font-size-base: 16px !default;
+$font-size-base: 24px !default;
 $font-size-root: 16px !default;
-$font-size-large: 20px !default;
-$font-size-small: 14px !default;
+$font-size-large: 28px !default;
+$font-size-small: 18px !default;
 
-$font-size-h1: 32px !default;
-$font-size-h2: 20px !default;
+$font-size-h1: 34px !default;
+$font-size-h2: 26px !default;
 $font-size-h3: 18px !default;
 $font-size-h4: $font-size-base !default;
 $font-size-h5: 14px !default;
@@ -60,7 +62,7 @@ $font-weight-bold: 700 !default;
 $font-weight-extra-bold: 800 !default;
 $font-weight-base: $font-weight-regular !default;
 
-$line-height-base: 20px !default; // 20/14
+$line-height-base: 36px !default;
 
 // Fonts
 //
