@@ -7,8 +7,16 @@
   margin-left: auto;
   // padding-left: ($gutter / 2);
   // padding-right: ($gutter / 2);
-  padding-left: $rh-xlr;
-  padding-right: $rh-xlr;
+  padding-left: $rh-sml;
+  padding-right: $rh-sml;
+  @include breakpoint(map-get($breakpoints, sml)){
+    padding-left: $rh-med;
+    padding-right: $rh-med;
+  };
+  @include breakpoint(map-get($breakpoints, med)){
+    padding-left: $rh-xlr;
+    padding-right: $rh-xlr;
+  };
 }
 
 // Creates a wrapper for a series of columns

@@ -55,32 +55,27 @@
     @include cf;
     position: relative;
     z-index: 20;
-    padding: 0 ($rh-xlr * 2);
     margin-top: $rh-med;
     margin-bottom: ($rh-lrg * 2);
-    // a {
-    //   @include transitions(background);
-    //   @include link-variant($color-brand-primary);
-    //   background: linear-gradient(to left, $color-brand-primary, $color-brand-primary);
-    //   background-size: 100% 1px;
-    //   background-repeat: no-repeat;
-    //   background-position: left 90%;
-    //   font-style: italic;
-    //   text-decoration: none;
-    //   &:hover,
-    //   &:focus {
-    //     background-position: left 110%;
-    //   }
-    // }
+    @include breakpoint(map-get($breakpoints, lrg)){
+      padding: 0 ($rh-xlr * 2);
+    };
   }
-  &__aside {
-    float: left;
-    width: 300px;
-    text-align: right;
-  }
-  &__main {
-    margin-left: 300px + $rh-lrg;
-  }
+  @include breakpoint(map-get($breakpoints, med)){
+    &__aside {
+        float: left;
+        width: 300px;
+        text-align: right;
+    }
+    &__main {
+      margin-left: 300px + $rh-lrg;
+    }
+  };
+  @include breakpoint(map-get($breakpoints, med), 'max-width'){
+    &__aside {
+      margin-bottom: $rh-med;
+    }
+  };
 
   & + & {
     margin-top: $rh-xlr;
