@@ -2,29 +2,8 @@
   font-family: $font-family-sans;
   @include fsRem(14px);
   font-weight: $font-weight-regular;
-  &__year {
+  &--year {
     margin-top: 6px;
     margin-bottom: 14px;
-    font-family: $font-family-serif;
   }
-  // &__item {
-  //   position: relative;
-  //   display: inline-block;
-  //   padding-right: $rh-med;
-  //   &:after {
-  //     content: '';
-  //     height: .9em;
-  //     position: relative;
-  //     left: (($rh-med / 2) + 2);
-  //     top: 0.1em;
-  //     display: inline-block;
-  //     border-left: 1px solid $gray-50;
-  //   }
-  //   &:last-child {
-  //     padding-right: 0;
-  //     &:after {
-  //       display: none;
-  //     }
-  //   }
-  // }
 }

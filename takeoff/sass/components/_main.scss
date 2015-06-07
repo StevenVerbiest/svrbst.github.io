@@ -31,20 +31,6 @@
   }
   &__heading {
     margin: 0;
-    // float: left;
-    // display: inline-block;
-    // &:first-child {
-    //   margin-top: -.6em;
-    // }
-  }
-  &__meta {
-    // clear: both;
-    // margin-bottom: $rh-med;
-    // margin-top: -$rh-sml;
-    // font-family: $font-family-sans;
-    // @include fsRem(14px);
-    // font-weight: $font-weight-regular;
-    // text-transform: uppercase;
   }
   &__link {
     position: relative;
@@ -58,8 +44,6 @@
       .project__btn {
         transform: translateY(0);
         opacity: 1;
-        // background: $black;
-        // color: $white;
       }
       img {
         transform: scale(1.1);
@@ -73,7 +57,6 @@
     padding: 0 ($rh-xlr * 2);
     margin-top: $rh-med;
     margin-bottom: ($rh-lrg * 2);
-    // text-align: center;
     a {
       @include transitions(background);
       @include link-variant($color-brand-primary);
@@ -83,15 +66,9 @@
       background-position: left 90%;
       font-style: italic;
       text-decoration: none;
-      // color: $gray-75;
-      // border-bottom: 1px solid $gray-75;
-      // font-size: 90%;
-      // font-family: $font-family-sans;
       &:hover,
       &:focus {
         background-position: left 110%;
-        // background: linear-gradient(to left, rgba($color-brand-primary, 0%), rgba($color-brand-primary, 0%));
-        // border-bottom: none;
       }
     }
   }
@@ -108,43 +85,3 @@
     margin-top: $rh-xlr * 3;
   }
 }
-
-// .block {
-//   border: 2px solid $gray-15;
-//   padding: $rh-sml;
-//   a {
-//     color: $gray-75;
-//     text-decoration: none;
-//   }
-//   &__img {
-//     position: relative;
-//     img {
-//       display: block;
-//     }
-//     &:before {
-//       @include transitions(opacity);
-//       content: '';
-//       opacity: .25;
-//       position: absolute;
-//       z-index: 10;
-//       top: 0;
-//       right: 0;
-//       bottom: 0;
-//       left: 0;
-//       background: $black;
-//     }
-//     &:hover,
-//     &:focus {
-//       &:before {
-//         opacity: 0;
-//       }
-//     }
-//   }
-//   &--title {
-//     margin-top: $rh-sml;
-//     @include fsRem(18px);
-//   }
-//   &__title {
-
-//   }
-// }
