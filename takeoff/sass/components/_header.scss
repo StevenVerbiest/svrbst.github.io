@@ -7,8 +7,10 @@
   background: $gray-10;
   border: 20px solid $white;
   &__logo {
-    animation: incomingHeader 1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    animation-delay: .5s;
+    animation: incomingHeader 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    animation-fill-mode: forwards;
+
+    // animation-delay: .5s;
     display: block;
     margin: 0;
     padding: 0;
@@ -22,7 +24,7 @@
     margin-top: 2vh;
     padding-top: 2vh;
 
-    background: linear-gradient(to right, $black, $black);
+    background: linear-gradient(to right, $color-brand-primary, $color-brand-primary);
     background-size: 20% 1px;
     background-repeat: no-repeat;
     background-position: right top;
@@ -38,11 +40,11 @@
 }
 
 @keyframes incomingHeader {
-  0% {
+  0%, 25% {
     opacity: 0;
     transform: translateY(-100px);
   }
-  25% {
+  50% {
     opacity: 0;
   }
   100% {

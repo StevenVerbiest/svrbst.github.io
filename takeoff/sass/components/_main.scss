@@ -1,7 +1,7 @@
 .project {
   &__img {
     img {
-      @include transitions(transform, 1.5s, linear);
+      @include transitions(transform, .5s, linear);
       display: block;
     }
   }
@@ -18,7 +18,7 @@
     justify-content: center;
     background: rgba($white, .9);
   }
-  &__title {
+  &__btn {
     @include transitions((background, color, opacity, transform), .5s);
     transform: translateY(-10px);
     opacity: 0;
@@ -29,12 +29,22 @@
     @include fsRem(16px);
     text-transform: uppercase;
   }
+  &__heading {
+    margin: 0;
+    // float: left;
+    // display: inline-block;
+    // &:first-child {
+    //   margin-top: -.6em;
+    // }
+  }
   &__meta {
-    margin-bottom: $rh-lrg;
-    font-family: $font-family-sans;
-    @include fsRem(14px);
-    font-weight: $font-weight-regular;
-    text-transform: uppercase;
+    // clear: both;
+    // margin-bottom: $rh-med;
+    // margin-top: -$rh-sml;
+    // font-family: $font-family-sans;
+    // @include fsRem(14px);
+    // font-weight: $font-weight-regular;
+    // text-transform: uppercase;
   }
   &__link {
     position: relative;
@@ -45,7 +55,7 @@
       .project__ct {
         background: rgba($white, .8);
       }
-      .project__title {
+      .project__btn {
         transform: translateY(0);
         opacity: 1;
         // background: $black;
@@ -57,18 +67,42 @@
     }
   }
   &__desc {
+    @include cf;
     position: relative;
     z-index: 20;
     padding: 0 ($rh-xlr * 2);
-    margin: ($rh-lrg * 2) 0;
+    margin-top: $rh-med;
+    margin-bottom: ($rh-lrg * 2);
     // text-align: center;
     a {
-      color: $black;
-      font-size: 85%;
+      @include transitions(background);
+      @include link-variant($color-brand-primary);
+      background: linear-gradient(to left, $color-brand-primary, $color-brand-primary);
+      background-size: 100% 1px;
+      background-repeat: no-repeat;
+      background-position: left 90%;
       font-style: italic;
+      text-decoration: none;
+      // color: $gray-75;
+      // border-bottom: 1px solid $gray-75;
+      // font-size: 90%;
+      // font-family: $font-family-sans;
+      &:hover,
+      &:focus {
+        background-position: left 110%;
+        // background: linear-gradient(to left, rgba($color-brand-primary, 0%), rgba($color-brand-primary, 0%));
+        // border-bottom: none;
+      }
     }
   }
-
+  &__aside {
+    float: left;
+    width: 300px;
+    text-align: right;
+  }
+  &__main {
+    margin-left: 300px + $rh-lrg;
+  }
 
   & + & {
     margin-top: $rh-xlr * 3;
