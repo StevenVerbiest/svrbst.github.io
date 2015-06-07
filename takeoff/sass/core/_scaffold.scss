@@ -25,8 +25,9 @@ body {
   min-height: 100%;
   min-width: 300px;
   background-color: $color-background;
+  padding-bottom: $rh-xxl * 3;
   // background-color: $gray-0;
-  // border: 20px solid $white;
+  border-bottom: 6px solid $color-brand-primary;
   color: $color-text;
   font-family: $font-family-base;
   @include fsRem($font-size-base);
@@ -63,6 +64,7 @@ a {
     background-position: left 110%;
   }
 }
+
 
 // Paragraphs
 p {
