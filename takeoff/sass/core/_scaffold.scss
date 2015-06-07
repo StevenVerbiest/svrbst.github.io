@@ -50,15 +50,17 @@ textarea {
 
 // Links
 a {
-  @include transitions((color, background, border));
-  color: $color-link;
-  &:visited {
-    color: $color-link-visited;
-  }
+  @include transitions(background);
+  @include link-variant($color-brand-primary);
+  background: linear-gradient(to left, $color-brand-primary, $color-brand-primary);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: left 90%;
+  font-style: italic;
+  text-decoration: none;
   &:hover,
   &:focus {
-    color: $color-link-hover;
-    text-decoration: none;
+    background-position: left 110%;
   }
 }
 

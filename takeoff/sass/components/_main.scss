@@ -36,6 +36,7 @@
     position: relative;
     overflow: hidden;
     display: block;
+    font-style: normal;
     &:hover,
     &:focus {
       .project__ct {
@@ -57,20 +58,20 @@
     padding: 0 ($rh-xlr * 2);
     margin-top: $rh-med;
     margin-bottom: ($rh-lrg * 2);
-    a {
-      @include transitions(background);
-      @include link-variant($color-brand-primary);
-      background: linear-gradient(to left, $color-brand-primary, $color-brand-primary);
-      background-size: 100% 1px;
-      background-repeat: no-repeat;
-      background-position: left 90%;
-      font-style: italic;
-      text-decoration: none;
-      &:hover,
-      &:focus {
-        background-position: left 110%;
-      }
-    }
+    // a {
+    //   @include transitions(background);
+    //   @include link-variant($color-brand-primary);
+    //   background: linear-gradient(to left, $color-brand-primary, $color-brand-primary);
+    //   background-size: 100% 1px;
+    //   background-repeat: no-repeat;
+    //   background-position: left 90%;
+    //   font-style: italic;
+    //   text-decoration: none;
+    //   &:hover,
+    //   &:focus {
+    //     background-position: left 110%;
+    //   }
+    // }
   }
   &__aside {
     float: left;
