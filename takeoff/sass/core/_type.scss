@@ -40,11 +40,17 @@
 }
 .heading--1 {
   @extend .heading;
-  @include fsRem($font-size-h1);
+  @include fsRem($font-size-h1 - 6);
+  @include breakpoint(map-get($breakpoints, med)){
+    @include fsRem($font-size-h1);
+  };
 }
 .heading--2 {
   @extend .heading;
-  @include fsRem($font-size-h2);
+  @include fsRem($font-size-h2 - 3);
+  @include breakpoint(map-get($breakpoints, med)){
+    @include fsRem($font-size-h2);
+  };
 }
 .heading--3 {
   @extend .heading;

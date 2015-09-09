@@ -1,4 +1,7 @@
 .page-header {
+  animation: headerAnim 10s linear infinite;
+  animation-direction: alternate;
+
   display: flex;
   align-items: center;
   text-align: center;
@@ -8,19 +11,22 @@
   background: $gray-10;
   border: 20px solid $white;
   &__logo {
-    animation: incomingHeader 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-    animation-fill-mode: forwards;
-
     display: block;
     margin: 0;
     padding: 0;
     background: none;
     font-size: 96px;
     font-size: 9.6vh;
+    @include breakpoint(1000px, 'min-height'){
+      @include fsRem(100px);
+    };
   }
   &__tagline {
-    margin: 0;
+    animation:
+      logoAnim 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards,
+      lineAnim .5s ease-out 1.5s both;
 
+    margin: 0;
     margin-top: 2vh;
     padding-top: 2vh;
 
@@ -31,15 +37,19 @@
 
     color: $gray-75;
     font-size: 20px;
-    font-size: 2vh;
     font-family: $font-family-serif;
     font-weight: $font-weight-regular;
     text-align: right;
     text-transform: none;
+    @include breakpoint(map-get($breakpoints, med), 'max-width'){
+      @include breakpoint(map-get($breakpoints, med), 'max-height'){
+        @include fsRem(18px);
+      };
+    };
   }
 }
 
-@keyframes incomingHeader {
+@keyframes logoAnim {
   0% {
     transform: translateY(-100px);
   }
@@ -52,5 +62,23 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes lineAnim {
+  from {
+    background-position: 125% top;
+  }
+  to {
+    background-position: right top;
+  }
+}
+
+@keyframes headerAnim {
+  from {
+    background: tint($gray-10, 5%);
+  }
+  to {
+    background: shade($gray-10, 5%);
   }
 }
