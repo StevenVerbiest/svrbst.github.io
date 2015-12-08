@@ -23,30 +23,35 @@
   }
   &__tagline {
     animation:
-      logoAnim 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards,
-      lineAnim .5s ease-out 1.5s both;
+      logoAnim 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
 
+    display: inline-block;
     margin: 0;
     margin-top: 2vh;
     padding-top: 2vh;
 
     background: linear-gradient(to right, $color-brand-primary, $color-brand-primary);
-    background-size: 20% 1px;
+    background-size: 50% 1px;
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: center top;
 
     color: $gray-75;
     font-size: 20px;
     font-family: $font-family-serif;
     font-weight: $font-weight-regular;
-    text-align: right;
     text-transform: none;
     @include breakpoint(map-get($breakpoints, med), 'max-width'){
       @include breakpoint(map-get($breakpoints, med), 'max-height'){
         @include fsRem(18px);
       };
     };
+    @include breakpoint(map-get($breakpoints, xlr)) {
+      background-position: right top;
+    };
   }
+  @include breakpoint(map-get($breakpoints, xlr)) {
+    text-align: right;
+  };
 }
 
 @keyframes logoAnim {
@@ -65,14 +70,14 @@
   }
 }
 
-@keyframes lineAnim {
-  from {
-    background-position: 125% top;
-  }
-  to {
-    background-position: right top;
-  }
-}
+// @keyframes lineAnim {
+//   from {
+//     background-position: 125% top;
+//   }
+//   to {
+//     background-position: right top;
+//   }
+// }
 
 @keyframes headerAnim {
   from {

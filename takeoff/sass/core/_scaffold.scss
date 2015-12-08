@@ -26,9 +26,9 @@ body {
   min-height: 100%;
   min-width: 300px;
   background-color: $color-background;
-  padding-bottom: $rh-xxl * 3;
+  // padding-bottom: $rh-xxl * 3;
   // background-color: $gray-0;
-  border-bottom: 6px solid $color-brand-primary;
+  // border-bottom: 6px solid $color-brand-primary;
   color: $color-text;
   font-family: $font-family-base;
   @include fsRem($font-size-base - 3);
